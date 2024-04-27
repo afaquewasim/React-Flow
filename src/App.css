@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+.app {
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.editor {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.workflow-canvas {
+    border: 2px dashed #ccc;
+    width: 400px;
+    height: 300px;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dragged-node {
+    position: absolute;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.editable-node {
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editable-node textarea {
+    position: absolute;
+    top: 20px;
+    /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 20px);
+    resize: none;
 }
